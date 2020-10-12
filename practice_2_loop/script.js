@@ -40,5 +40,8 @@ for(let i=0; i<2; i++){
         }
 }
 
+let fruits = "orange, apple, banana";
+let ban = fruits.slice(14, 23);
+console.log(ban);
 
 
