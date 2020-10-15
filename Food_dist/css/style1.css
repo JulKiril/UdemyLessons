@@ -1,0 +1,23 @@
+
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.fade{
+    animation-name: fadein;
+    animation-duration: 1s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
