@@ -39,9 +39,7 @@ showTabContent();
     });
 //TIMER//////////////////////////
 
-
-
-const deadline = "2020-10-17";
+const deadline = "2020-10-30";
 
 function addZero(num){
     if(num>=0 && num < 10){
@@ -81,14 +79,17 @@ function setClock(selector,endTime){
 
     function updateClock(){
         const t = getTimeRemaining(endTime);
-
         days.innerHTML = addZero(t.days);
         hours.innerHTML = addZero(t.hours);
         minutes.innerHTML = addZero(t.minutes);
         seconds.innerHTML = addZero(t.seconds);
     
-        if(t.total <=0) {
+        if(t.total <= 0) {
             clearInterval(timeInterval);
+            days.innerHTML = '00';
+            hours.innerHTML = '00';
+            minutes.innerHTML = '00';
+            seconds.innerHTML = '00';
         }
     }
   
