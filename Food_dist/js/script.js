@@ -252,7 +252,7 @@ function postData(form){
 
         const json = JSON.stringify(object);
 
-        fetch('server.ph2p', {
+        fetch('server.php', {
             method: "POST",
             headers: {
                 'Content-type': 'application/json'
@@ -312,7 +312,9 @@ function showThanksModal(message){
     },4000);
 }
 
-
+    fetch('http://localhost:3000/menu')
+        .then(data => data.json())
+        .then(res => console.log(res));
 
 });
 
